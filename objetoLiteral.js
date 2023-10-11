@@ -8,3 +8,12 @@ const user = {
     console.log(this.nome, this.email);
   }
 }
+
+const exibir = function() {
+  console.log(this.nome);
+}
+
+const exibirNome = exibir.bind(user)
+
+exibirNome();
+exibir();
